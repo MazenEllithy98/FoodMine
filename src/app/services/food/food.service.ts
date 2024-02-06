@@ -1,10 +1,38 @@
 import { Injectable } from '@angular/core';
 import { Food } from '../../shared/models/Food';
+import { Tag } from '../../shared/models/Tag';
 @Injectable({
   providedIn: 'root',
 })
 export class FoodService {
   constructor() {}
+  getAllFoodsBySearchTerm(searchTerm: string): Food[] {
+    return this.getAll().filter((food) =>
+      food.name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+  }
+  getAllTags(): Tag[] {
+    return [
+      { name: 'All', count: 6 },
+      { name: 'FastFood', count: 3 },
+      { name: 'Sweets', count: 1 },
+      { name: 'Fruits', count: 1 },
+      { name: 'Cakes', count: 1 },
+      { name: 'Snacks', count: 1 },
+      { name: 'Breakfast', count: 1 },
+      { name: 'Lunch', count: 3 },
+      { name: 'Meat', count: 1 },
+      { name: 'Pasta', count: 1 },
+      { name: 'Sandwiches', count: 1 },
+      { name: 'Hamburger', count: 1 },
+    ];
+  }
+
+  getAllFoodsByTag(tag: string): Food[] {
+    return tag == 'All'
+      ? this.getAll()
+      : this.getAll().filter((food) => food.tags?.includes(tag));
+  }
   getAll(): Food[] {
     return [
       {
@@ -31,14 +59,14 @@ export class FoodService {
       },
       {
         id: 3,
-        name: 'Shrimp Noodles',
+        name: 'Steak',
         price: 5,
         cookTime: '15-20',
         favorite: true,
-        origins: ['japan', 'china'],
+        origins: ['japan'],
         stars: 3.3,
         imageUrl: '/assets/images/foods/food-3.jpg',
-        tags: ['FastFood', 'Pasta', 'Lunch'],
+        tags: ['SlowFood', 'Meat', 'Lunch'],
       },
       {
         id: 4,

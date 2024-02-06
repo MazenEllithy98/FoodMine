@@ -11,8 +11,9 @@ import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 // import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
+import { TagsComponent } from './tags/tags.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent ],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent ],
   imports: [BrowserModule, AppRoutingModule , FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
