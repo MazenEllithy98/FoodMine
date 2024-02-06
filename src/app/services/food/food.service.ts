@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Food } from '../../shared/models/food';
-
+import { Food } from '../../shared/models/Food';
 @Injectable({
   providedIn: 'root',
 })
@@ -38,7 +37,7 @@ export class FoodService {
         favorite: true,
         origins: ['japan', 'china'],
         stars: 3.3,
-        imageUrl: '/assets/images/foods/food-4.jpg',
+        imageUrl: '/assets/images/foods/food-3.jpg',
         tags: ['FastFood', 'Pasta', 'Lunch'],
       },
       {
@@ -49,7 +48,7 @@ export class FoodService {
         favorite: false,
         origins: ['italy'],
         stars: 3.0,
-        imageUrl: '/assets/images/foods/food-5.jpg',
+        imageUrl: '/assets/images/foods/food-4.jpg',
         tags: ['FastFood', 'Pasta', 'Lunch'],
       },
       {
@@ -60,7 +59,7 @@ export class FoodService {
         favorite: false,
         origins: ['italy'],
         stars: 4.0,
-        imageUrl: '/assets/images/foods/food-6.jpg',
+        imageUrl: '/assets/images/foods/food-5.jpg',
         tags: ['FastFood', 'Sandwiches', 'Lunch'],
       },
       {
@@ -71,7 +70,7 @@ export class FoodService {
         favorite: false,
         origins: ['germany', 'us'],
         stars: 3.5,
-        imageUrl: '/assets/images/foods/food-3.jpg',
+        imageUrl: '/assets/images/foods/food-6.jpg',
         tags: ['FastFood', 'Hamburger'],
       },
     ];
