@@ -12,8 +12,9 @@ import { SearchComponent } from './search/search.component';
 // import { StarRatingModule } from 'angular-star-rating';
 import { FormsModule } from '@angular/forms';
 import { TagsComponent } from './tags/tags.component';
+import { FoodPageComponent } from './food-page/food-page.component';
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent ],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, SearchComponent, TagsComponent, FoodPageComponent ],
   imports: [BrowserModule, AppRoutingModule , FormsModule],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
